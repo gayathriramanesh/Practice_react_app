@@ -1,33 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-
-class countchar extends React.Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      message: ''
-    };
-  }
-
-  onmessagechange(text) {
-    this.setState({
-      message: 'message has' + text.length + 'number of characters'
-    });
-  }
-
-  render()
-  {
-    return <div>
-      <p>enter a message:<input type="text" onChange={e => this.onmessagechange(e.target.value)}></input></p>
-    </div>
-  }
-}
+import App from './App';
 
 
-const element = <countchar></countchar>
-ReactDOM.render(element,
-  document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));
+
+
+
 
 
 
